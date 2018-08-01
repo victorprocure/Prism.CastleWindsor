@@ -6,6 +6,7 @@ using Prism.Events;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Regions;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Prism.CastleWindsor.Wpf.Tests
 {
@@ -32,7 +33,7 @@ namespace Prism.CastleWindsor.Wpf.Tests
             var bootstrapper = new DefaultCastleWindsorBootstrapper();
             bootstrapper.Run();
 
-            Assert.IsTrue(CommonServiceLocator.ServiceLocator.Current is CastleWindsorServiceLocatorAdapter);
+            Assert.IsTrue(ServiceLocator.Current is CastleWindsorServiceLocatorAdapter);
         }
 
         [TestMethod]

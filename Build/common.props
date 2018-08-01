@@ -1,0 +1,41 @@
+<Project>
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/victorprocure/Prism.CastleWindsor</RepositoryUrl>
+        <BuildVersion>1.0.0</BuildVersion>
+        <BuildVersionMajor>$(BuildVersion.Split('.')[0])</BuildVersionMajor>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <AssemblyOriginatorKeyFile>../../build/Prism.CastleWindsor.snk</AssemblyOriginatorKeyFile>
+        <SignAssembly>true</SignAssembly>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+		<Product>Castle Windsor Plugin for Prism</Product>
+		<FileVersion>$(BuildVersion)</FileVersion>
+		<VersionPrefix>$(BuildVersion)</VersionPrefix>
+		<AssemblyVersion>$(BuildVersionMajor).0.0</AssemblyVersion>
+		<AssemblyTitle>Castle Windsor is best of breed, mature Inversion of Control container available for .NET</AssemblyTitle>
+		<Authors>Victor Procure</Authors>
+		<PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/victorprocure/Prism.CastleWindsor</PackageProjectUrl>
+		<PackageIconUrl>http://www.castleproject.org/img/windsor-logo.png</PackageIconUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageOutputPath>../../output/</PackageOutputPath>
+		<PackageVersion>$(BuildVersion)</PackageVersion>
+		<IncludeSymbols>true</IncludeSymbols>
+		<IncludeSource>false</IncludeSource>
+		<CurrentYear>$([System.DateTime]::Now.ToString("yyyy"))</CurrentYear>
+		<Copyright>Copyright 2017-$(CurrentYear) PrismLibrary - http://www.prismlibrary.com/</Copyright>
+		<ContentTargetFolders>.</ContentTargetFolders>
+	</PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
+		<DefineConstants>$(DefineConstants);</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="..\..\CHANGELOG.md" />
+	</ItemGroup>
+</Project>

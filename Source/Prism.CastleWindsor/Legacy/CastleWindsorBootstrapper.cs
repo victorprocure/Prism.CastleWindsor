@@ -2,7 +2,7 @@
 using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 using Prism.CastleWindsor.Ioc;
 using Prism.CastleWindsor.Properties;
 using Prism.Events;
@@ -15,7 +15,7 @@ using Prism.Regions;
 namespace Prism.CastleWindsor
 {
     [Obsolete("Recommend you use PrismApplication as the App's base class. This will require updating the App.xaml and App.xaml.cs files.", false)]
-    public abstract class CastleWindsorBootstrapper : Bootstrapper
+    public abstract class CastleWindsorBootstrapper : Prism.CastleWindsor.Bootstrapper
     {
         private bool _useDefaultConfiguration = true;
 
@@ -58,7 +58,7 @@ namespace Prism.CastleWindsor
                 throw new InvalidOperationException(Resources.NullCastleWindsorContainerException);
             }
 
-            _containerExtension = CreateContainerExtension();
+            ContainerExtension = CreateContainerExtension();
 
             Logger.Log(Resources.ConfiguringCastleWindsorContainer, Category.Debug, Priority.Low);
             ConfigureContainer();
@@ -166,7 +166,7 @@ namespace Prism.CastleWindsor
             Container
                 .Register(Component.For<ILoggerFacade>().Instance(Logger))
                 .Register(Component.For<IModuleCatalog>().Instance(ModuleCatalog))
-                .Register(Component.For<IContainerExtension>().Instance(_containerExtension));
+                .Register(Component.For<IContainerExtension>().Instance(ContainerExtension));
 
             if (!_useDefaultConfiguration)
             {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
-using CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 using Prism.CastleWindsor.Ioc;
 using Prism.Ioc;
 using Prism.Regions;

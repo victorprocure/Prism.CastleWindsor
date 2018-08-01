@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Prism.CastleWindsor.Wpf.Tests.Support;
 using Prism.Logging;

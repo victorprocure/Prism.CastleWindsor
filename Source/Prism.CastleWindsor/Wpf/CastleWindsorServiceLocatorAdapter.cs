@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Castle.MicroKernel;
 using Castle.Windsor;
-using CommonServiceLocator;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Prism.CastleWindsor
 {
     /// <summary>
     /// Defines a <see cref="IWindsorContainer"/> adapter for the <see cref="IServiceLocator"/> interface to be used by the Prism Library.
     /// </summary>
-    /// <seealso cref="CommonServiceLocator.ServiceLocatorImplBase" />
+    /// <seealso cref="ServiceLocatorImplBase" />
     public class CastleWindsorServiceLocatorAdapter : ServiceLocatorImplBase
     {
         private readonly IWindsorContainer _container;
