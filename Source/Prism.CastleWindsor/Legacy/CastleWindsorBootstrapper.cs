@@ -2,7 +2,7 @@
 using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Microsoft.Practices.ServiceLocation;
+using CommonServiceLocator;
 using Prism.CastleWindsor.Ioc;
 using Prism.CastleWindsor.Properties;
 using Prism.Events;
@@ -132,7 +132,6 @@ namespace Prism.CastleWindsor
             ExceptionExtensions.RegisterFrameworkExceptionType(typeof(ComponentNotFoundException));
             ExceptionExtensions.RegisterFrameworkExceptionType(typeof(ComponentRegistrationException));
             ExceptionExtensions.RegisterFrameworkExceptionType(typeof(CircularDependencyException));
-            ExceptionExtensions.RegisterFrameworkExceptionType(typeof(ComponentDependencyRegistrationExtensions));
         }
 
         /// <summary>

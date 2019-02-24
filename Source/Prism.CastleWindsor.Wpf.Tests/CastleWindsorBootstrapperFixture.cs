@@ -4,9 +4,8 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using Castle.MicroKernel;
-using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Microsoft.Practices.ServiceLocation;
+using CommonServiceLocator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Prism.CastleWindsor.Wpf.Tests.Support;
 using Prism.Logging;
@@ -147,8 +146,6 @@ namespace Prism.CastleWindsor.Wpf.Tests
                 typeof(ComponentRegistrationException)));
             Assert.IsTrue(ExceptionExtensions.IsFrameworkExceptionRegistered(
                 typeof(CircularDependencyException)));
-            Assert.IsTrue(ExceptionExtensions.IsFrameworkExceptionRegistered(
-                typeof(ComponentDependencyRegistrationExtensions)));
         }
     }
 
