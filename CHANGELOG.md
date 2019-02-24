@@ -1,3 +1,8 @@
+# 1.0.3
+Removed PrismApplicationBase functionality now that Prism 7.1 is out and stable
+Updated ServiceLocator version to the latest 2.0.4
+Updated to latest Castle Windsor 5.0
+
 # 1.0.1
 Added build scripts
 

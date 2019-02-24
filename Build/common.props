@@ -3,7 +3,7 @@
         <NoWarn>$(NoWarn);CS1591</NoWarn>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/victorprocure/Prism.CastleWindsor</RepositoryUrl>
-        <BuildVersion>1.0.2</BuildVersion>
+        <BuildVersion>1.0.3</BuildVersion>
         <BuildVersionMajor>$(BuildVersion.Split('.')[0])</BuildVersionMajor>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AssemblyOriginatorKeyFile>../../build/Prism.CastleWindsor.snk</AssemblyOriginatorKeyFile>
@@ -27,7 +27,7 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<IncludeSource>false</IncludeSource>
 		<CurrentYear>$([System.DateTime]::Now.ToString("yyyy"))</CurrentYear>
-		<Copyright>Copyright 2017-$(CurrentYear) PrismLibrary - http://www.prismlibrary.com/</Copyright>
+		<Copyright>Copyright 2019-$(CurrentYear) PrismLibrary - http://www.prismlibrary.com/</Copyright>
 		<ContentTargetFolders>.</ContentTargetFolders>
 	</PropertyGroup>
 
