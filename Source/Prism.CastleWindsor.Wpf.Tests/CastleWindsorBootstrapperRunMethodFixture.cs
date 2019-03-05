@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using Castle.MicroKernel;
 using Castle.Windsor;
+using CommonServiceLocator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Prism.Events;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Regions;
-using Microsoft.Practices.ServiceLocation;
 
 namespace Prism.CastleWindsor.Wpf.Tests
 {

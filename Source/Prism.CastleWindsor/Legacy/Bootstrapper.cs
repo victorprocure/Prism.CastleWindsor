@@ -2,11 +2,11 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using CommonServiceLocator;
 using Prism.Logging;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Regions.Behaviors;
-using Microsoft.Practices.ServiceLocation;
 using Prism.Mvvm;
 using Prism.Ioc;
 

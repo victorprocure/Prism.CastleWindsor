@@ -23,7 +23,7 @@ namespace Prism.CastleWindsor.Ioc
 
         public object Resolve(Type type, string name)
         {
-            return Instance.Resolve(type, name);
+            return Instance.Resolve(name, type);
         }
 
         public void RegisterInstance(Type type, object instance)
@@ -55,11 +55,8 @@ namespace Prism.CastleWindsor.Ioc
             return Instance.Resolve(viewModelType);
         }
 
-        public bool SupportsModules
-        {
-            get { return true; }
-        }
+        public bool SupportsModules => true;
 
-        public IWindsorContainer Instance { get; private set; }
+        public IWindsorContainer Instance { get; }
     }
 }
